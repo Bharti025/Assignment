@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="/list/<%=editlist.id%>?_method=PUT" >
+        <b>Name:</b>
+         <br><input type="text" name="name" value="<%=editlist.name%>"><br><p></p>
+        <b>Email:</b><br><input type="text" name="Email" value="<%=editlist.Email%>"><br><p></p>
+        <b>Mobile No:</b><br><input type="number"name="Mobile_number" value="<%=editlist.Mobile_number%>"><br><p></p>
+        <b>Designation:</b><br>
+        <select name="Designation" value="<%=editlist.Designation%>">
+           <option>HR</option>
+           <option>Manager</option>
+           <option>Sales</option>
+          </select><br><p></p>
+        <b> Gender: </b><br>
+        <input type="radio" value="<%=editlist.Gender%>" id="Male" name="Gender" value="Male" />
+         <label for="Male">Male</label>
+   
+         <input type="radio" id="Female" value="<%=editlist.Gender%>" name="Gender" value="Female" />
+         <label for="Female">Female</label>
+         <br>
+           <b> Course: </b><br>
+           <input type="checkbox" name="Course" value="<%=editlist.Course%>" />
+         <label for="<%=editlist.Course%>">MCA</label>
+         <input type="checkbox" name="Course" value="<%=editlist.Course%>" />
+         <label for="<%=editlist.Course%>">BCA</label>
+         <input type="checkbox" name="Course" value="<%=editlist.Course%>" />
+         <label for="<%=editlist.Course%>">BSC</label>
+         <br>
+        <b>Image Upload:</b> <br><input type="file" name="Image"> <br><p></p>
+        <button class="btn btn-success ">Update</button>
+       </form>
+   </body>    
+    
+    
+    
+
+</html>
